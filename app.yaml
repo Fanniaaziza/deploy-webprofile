@@ -3,10 +3,13 @@ api_version: 1
 threadsafe: true
 
 handlers:
-- url: /
-  static_files: www/index.html
-  upload: www/index.html
+- url: /css
+  static_dir: css
 
-- url: /(.*)
-  static_files: www/\1
-  upload: www/(.*)
+- url: /img/(.*\.(gif|png|jpg))
+  static_files: img/\1
+  upload: img/(.*\.(gif|png|jpg))
+
+- url: /.*
+  static_files: index.html
+  upload: index.html
