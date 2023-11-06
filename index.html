@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Web Profile</title>
+</head>
+<body>
+  <div class="toggle" onclick="toggleMenu();"></div>
+
+  <section class="banner" id="home">
+    <div class="imgSlider">
+      <img src="images/Fannia1.jpg" alt="Fannia">
+    </div>
+    <div class="contentBox">
+      <h5 class="logoText">My Profile</h5>
+      <div>
+        <h4><span>Hello</span> I'm</h4>
+        <h2>Fannia Nur Aziza</h2>
+        <h4>I'm a Cloud Computing Student</h4>
+        <p>"Saya adalah seorang mahasiswa semester 5 yang sedang menekuni bidang teknologi khususnya cloud computing"</p>
+        <a href="#" class="btn">About Me</a>
+      </div>
+      <ul class="social">
+        <li><a href="#"><img src="images/facebook.png" alt=""></a></li>
+        <li><a href="#"><img src="images/instagram.png" alt=""></a></li>
+        <li><a href="#"><img src="images/twitter.png" alt=""></a></li>
+      </ul>
+    </div>
+    
+  </section>
+
+  <section class="about" id="about">
+    <div class="title">
+      <h2>About Me</h2>
+    </div>
+    <div class="content">
+      <div class="textBox">
+        <p>
+          Hai, nama saya Fannia Nur Aziza. Saya adalah mahasiswa yang sedang menempuh S1 Jurusan Sistem Informasi UPN Veteran Jawa timur. 
+          Saat ini saya berada di semester 5 dan sedang mengikuti program Bangkit Academy Cloud Computing Learning Path. Saya lahir di Surabaya, 12 Februari 2003 dan saat ini saya berumur 20 tahun.
+          Saya seorang penggemar teknologi yang selalu ingin tahu tentang perkembangan terbaru di dunia teknologi. Saya senang membagikan pengetahuan saya dengan orang lain.
+        </p>
+      </div>
+      <div class="imgBox">
+        <img src="images/Fannia2.jpg" alt="">
+      </div>
+    </div>
+  </section>
+
+  <section class="services" id="services">
+    <div class="title">
+      <h2>Skill</h2>
+      <p>Berikut merupakan skill yang cukup saya kuasai</p>
+    </div>
+    <div class="content">
+      <div class="servicesBox">
+        <img src="images/icon1.png" alt="">
+        <h2>Web Design</h2>
+      </div>
+      <div class="servicesBox">
+        <img src="images/icon2.png" alt="">
+        <h2>Web Development</h2>
+      </div>
+      <div class="servicesBox">
+        <img src="images/icon4.png" alt="">
+        <h2>Photography</h2>
+      </div>
+      <div class="servicesBox">
+        <img src="images/icon5.png" alt="">
+        <h2>Content Writing</h2>
+      </div>
+      <div class="servicesBox">
+        <img src="images/icon6.png" alt="">
+        <h2>Video Editing</h2>
+      </div>
+    </div>
+  </section>
+
+  <section class="work" id="work">
+    <div class="title">
+      <h2>Projects</h2>
+      <p>Berikut beberapa project yang pernah saya buat, yaitu web profile dan game sedehana</p>
+    </div>
+    <div class="content">
+      <div class="workBox">
+        <div class="imgBox">
+          <img src="images/Project1.png" alt="">
+        </div>
+        <div class="textBox">
+          <h3>Project 01</h3>
+        </div>
+      </div>
+      <div class="workBox">
+        <div class="imgBox">
+          <img src="images/Project2.png" alt="">
+        </div>
+        <div class="textBox">
+          <h3>Project 02</h3>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <div class="title">
+      <h2>Contact Us</h2>
+    </div>
+    <div class="contactForm">
+      <div class="row">
+        <div class="col50">
+          <input type="text" name="" placeholder="First Name">
+        </div>
+        <div class="col50">
+          <input type="text" name="" placeholder="Last Name">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col100">
+          <input type="text" name="" placeholder="Email">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col100">
+          <textarea placeholder="Message"></textarea>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col100">
+          <input type="submit" value="send" class="btn">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="sidebar">
+    <ul class="menu">
+      <li><a href="#home" onclick="toggleMenu();">Home</a></li>
+      <li><a href="#about" onclick="toggleMenu();">About</a></li>
+      <li><a href="#services" onclick="toggleMenu();">Services</a></li>
+      <li><a href="#work" onclick="toggleMenu();">Work</a></li>
+      <li><a href="#contact" onclick="toggleMenu();">Contact</a></li>
+    </ul>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

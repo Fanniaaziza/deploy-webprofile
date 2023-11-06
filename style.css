@@ -1,0 +1,485 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+:root {
+  --brown-color: #c74d07;
+  --white-color: white;
+  --dark-gray-color: #333;
+  --gray-color: #464646;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  scroll-behavior: smooth;
+}
+
+/* -------------Toggle------------ */
+.toggle {
+  position: fixed;
+  top: 30px;
+  right: 30px;
+  width: 50px;
+  height: 50px;
+  background: var(--gray-color) url(images/menu.png);
+  background-size: 30px;
+  background-position: center;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  z-index: 10000;
+}
+
+.toggle.active {
+  background: var(--gray-color) url(images/close.png);
+  background-size: 25px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* ------------Banner----------------- */
+section {
+  padding: 100px;
+  min-height: 100vh;
+}
+
+.banner {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+}
+
+.banner .imgSlider {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 500px;
+  height: 100%;
+}
+
+.banner .imgSlider img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.banner .contentBox,
+.sidebar {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: calc(100% - 500px);
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 100px;
+}
+
+.banner .contentBox .logoText {
+  position: absolute;
+  top: 40px;
+  left: 100px;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  background: var(--brown-color);
+  color: var(--dark-gray-color);
+  padding: 0 5px;
+}
+
+.banner .contentBox h4 {
+  font-size: 1.5em;
+  color: var(--dark-gray-color);
+  font-weight: 300;
+}
+
+.banner .contentBox h4 span {
+  color: var(--brown-color);
+  font-size: 1.5em;
+  font-weight: 700;
+}
+
+.banner .contentBox h2 {
+  font-size: 3em;
+  color: var(--dark-gray-color);
+  line-height: 1em;
+}
+
+.banner .contentBox p {
+  font-size: 1.1em;
+  margin: 20px 0;
+  font-weight: 300;
+}
+
+.banner .contentBox .btn {
+  background: var(--brown-color);
+  color: var(--white-color);
+  padding: 10px 30px;
+  display: inline-block;
+  text-decoration: none;
+  font-weight: 500;
+  letter-spacing: 2px;
+}
+
+/* ------------social------------- */
+.social {
+  position: absolute;
+  left: 100px;
+  bottom: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.social li {
+  margin-right: 10px;
+  list-style: none;
+}
+
+.social li img {
+  transform: scale(0.5);
+  opacity: 0.7;
+}
+
+.social li img:hover {
+  opacity: 1;
+}
+
+/* --------------about-------------- */
+.title {
+  width: 100%;
+  text-align: center;
+}
+
+.title h2 {
+  position: relative;
+  color: var(--brown-color);
+  font-size: 1.8em;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.title p {
+  max-width: 700px;
+  padding-top: 20px;
+  display: inline-block;
+  color: var(--white-color);
+}
+
+.title h2::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -10px;
+  width: 60px;
+  height: 4px;
+  background: var(--brown-color);
+}
+
+.about {
+  background: var(--gray-color);
+}
+
+.about .content {
+  margin-top: 40px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.about .content .textBox {
+  min-width: 48%;
+  width: 48%;
+}
+
+.about .content .textBox p {
+  color: var(--white-color);
+}
+
+.about .content .imgBox {
+  margin-left: 40px;
+}
+
+.about .content .imgBox img {
+  max-width: 100%;
+}
+
+/* -------------services-------------- */
+
+.services .content {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.services .content .servicesBox {
+  padding: 40px 20px;
+  max-width: 340px;
+  margin: 20px;
+  transition: 0.5s;
+  text-align: center;
+  background: #f5f5f5;
+}
+
+.services .content .servicesBox:hover {
+  background: var(--gray-color);
+}
+
+.services .content .servicesBox img {
+  max-width: 80px;
+  transition: 0.5s;
+}
+
+.services .content .servicesBox:hover img {
+  filter: invert(1);
+}
+
+.services .content .servicesBox h2 {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  font-size: 20px;
+  font-weight: 600;
+  transition: 0.5s;
+}
+
+.services .content .servicesBox:hover h2 {
+  color: var(--white-color);
+}
+
+.services .content .servicesBox p {
+  margin: 0;
+  transition: 0.5s;
+}
+
+.services .content .servicesBox:hover p {
+  color: var(--white-color);
+}
+
+.work .title p {
+  color: var(--gray-color);
+  margin-bottom: 20px;
+}
+
+.work .content {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.work .content .workBox {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  margin: 10px;
+  transition: 0.5s;
+  text-align: center;
+}
+
+.work .content .workBox .imgBox,
+.work .content .workBox .textBox {
+  position: absolute;
+  top: 0;
+  letter-spacing: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.work .content .workBox .imgBox img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.work .content .workBox .textBox {
+  background: var(--gray-color);
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.work .content .workBox:hover .textBox {
+  opacity: 1;
+}
+
+.work .content .workBox:hover .textBox h3 {
+  color: var(--white-color);
+  text-transform: var(--white-color);
+  letter-spacing: 1px;
+  font-size: 1em;
+}
+
+/* -------------------contact---------------- */
+.contact {
+  background: var(--gray-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.contact .contactForm {
+  margin-top: 30px;
+}
+
+.contact .contactForm .row {
+  width: 100%;
+  display: flex;
+}
+
+.contact .contactForm .row .col50 {
+  width: 50%;
+  margin: 10px;
+}
+
+.contact .contactForm .row .col100 {
+  width: 100%;
+  margin: 10px;
+  text-align: center;
+}
+
+.contact .contactForm .row input,
+.contact .contactForm .row textarea {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  outline: none;
+  background: #a0a0a0;
+  color: var(--white-color);
+  font-size: 16px;
+  resize: none;
+}
+
+.contact .contactForm .row textarea {
+  height: 100px;
+}
+
+.contact .contactForm .row input[type='submit'] {
+  background: var(--blue-color);
+  color: var(--white-color);
+  padding: 10px 30px;
+  display: inline-block;
+  font-weight: 500;
+  letter-spacing: 2px;
+  cursor: pointer;
+  max-width: 150px;
+}
+
+.contact .contactForm .row .btn:hover {
+  background: var(--gray-color);
+  color: var(--brown-color);
+  transition: 0.5s;
+}
+
+/* ----------sidebar------------- */
+.sidebar {
+  position: fixed;
+  background: var(--gray-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.5s;
+  padding: 40px;
+  z-index: 100;
+  right: -100%;
+}
+
+.sidebar .menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.sidebar .menu li {
+  list-style: none;
+}
+
+.sidebar .menu li a {
+  color: var(--white-color);
+  text-decoration: none;
+  font-size: 2em;
+  margin: 10px 0;
+  font-weight: 500;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.sidebar .menu li a:hover {
+  color: var(--brown-color);
+}
+
+.sidebar.active {
+  right: 0;
+}
+
+@media (max-width: 991px) {
+  .banner .imgSlider {
+    display: none;
+  }
+  .banner .contentBox,
+  .sidebar {
+    width: 100%;
+    padding: 40px;
+  }
+  .toggle {
+    right: 40px;
+  }
+  .social {
+    left: 40px;
+  }
+  section {
+    padding: 40px;
+  }
+  .about .content {
+    flex-direction: column;
+    margin-top: 10;
+  }
+  .about .content .textBox {
+    width: 100%;
+    margin-bottom: 40px;
+  }
+  .about .content .imgBox {
+    margin-left: 0;
+  }
+  .services .content .servicesBox {
+    padding: 30px 20px;
+    max-width: 340px;
+    margin: 10px;
+  }
+  .contact .contactForm {
+    width: 100%;
+  }
+  .contact .contactForm .row {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .contact .contactForm .row .col50 {
+    width: 100%;
+  }
+  .sidebar ul li a {
+    font-size: 1.5em;
+  }
+}
+
+@media (max-width: 500px) {
+  .services .content .servicesBox,
+  .work .content .workBox {
+    padding: 30px 20px;
+    max-width: 100%;
+    width: 100%;
+    margin: 10px 0;
+  }
+}
